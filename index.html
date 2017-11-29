@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>	<meta charset="UTF-8">
+    <title> HangmanApp </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"> </script>	<script src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>   	<!--Include the CSS for donut d3-->	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,700,500'>	<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>	<link rel="stylesheet" href="css/style.css">	<script src="app.js"></script>
+</head>
+
+<body ng-app="HangmanApp" ng-controller="GameCtrl">    <div><!--        <div>            noOfGuesses left ::{{noOfGuesses}}        </div>-->		  		<div class="widget">			<div class="header">Guesses Left</div>			<div id="chart" class="chart-container">		</div>		    </div><!--        <div>            Your Incorrect noOfGuesses ::            <span ng-repeat ="letter in incorrectLetterList">                {{letter}}            </span>        </div>        <div>            Your Correct noOfGuesses ::            <span ng-repeat ="letter in correctLettersList">                {{letter}}            </span>        </div>-->	        <div class="C1" >             Guess your word: {{displayWord}}        </div>                <div>            <div class="C1">                <input type="text" name="guess" id="txtbox" ng-model="input.letter"> 							</div>				<button style="font-size: 15px; float:center;" ng-click ="letterChosen()"> Submit </button>	        </div>    </div>
+   <!--This is to include the d3.js chart-->
+</body>
+
+</html>
